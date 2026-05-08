@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy · Peka Counter — Koggi Studio</title>
+<link rel="apple-touch-icon" href="https://kgs-apps.github.io/assets/icons/peka-counter.png">
+<link rel="icon" href="https://kgs-apps.github.io/assets/icons/peka-counter.png">
+<style>
+  :root {
+    --bg: #FFFFFF; --surface: #FAFAFA; --surface-2: #F5F5F7;
+    --ink: #1D1D1F; --ink-2: #424245; --muted: #6E6E73; --soft: #86868B;
+    --rule: #D2D2D7; --rule-soft: #E8E8ED;
+    --accent: #0071E3; --accent-press: #0058B0;
+    --peka-tint: #E8EDF5; --peka-mark: #3D4663;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Pretendard", "Noto Sans KR", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+    --gutter: clamp(20px, 4vw, 40px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000; --surface: #1C1C1E; --surface-2: #2C2C2E;
+      --ink: #F5F5F7; --ink-2: #D1D1D6; --muted: #98989D; --soft: #6E6E73;
+      --rule: #38383A; --rule-soft: #2C2C2E;
+      --accent: #2997FF; --accent-press: #5AB1FF;
+      --peka-tint: #1F2433; --peka-mark: #A4B0CC;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; letter-spacing: -0.003em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 var(--gutter); }
+
+  .topbar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 80%, transparent); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--rule-soft); }
+  .topbar .row { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .wordmark { font-size: 17px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .topnav { display: flex; gap: 24px; }
+  .topnav a { color: var(--ink-2); font-size: 14px; font-weight: 400; }
+  .topnav a:hover { color: var(--ink); text-decoration: none; }
+
+  .doc-hero { padding: clamp(48px, 8vw, 80px) 0 clamp(20px, 3vw, 32px); }
+  .doc-hero .crumb { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+  .doc-hero .crumb a { color: var(--muted); text-decoration: none; }
+  .doc-hero .crumb a:hover { color: var(--ink); text-decoration: underline; }
+  .doc-hero h1 { font-size: clamp(34px, 5vw, 48px); font-weight: 700; line-height: 1.1; letter-spacing: -0.022em; margin: 0 0 14px; color: var(--ink); }
+  .doc-hero .meta { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; padding: 5px 12px; border-radius: 999px; background: var(--surface-2); color: var(--muted); margin: 0; }
+
+  .doc { padding: clamp(24px, 4vw, 40px) 0 clamp(64px, 9vw, 96px); }
+  .doc-body { max-width: 720px; }
+  .doc-body p, .doc-body ul { font-size: 16px; line-height: 1.7; color: var(--ink-2); }
+  .doc-body p { margin: 0 0 16px; }
+  .doc-body h2 { font-size: 22px; font-weight: 600; line-height: 1.25; letter-spacing: -0.012em; margin: 40px 0 12px; color: var(--ink); }
+  .doc-body h2:first-child { margin-top: 0; }
+  .doc-body ul { padding-left: 20px; margin: 0 0 16px; }
+  .doc-body ul li { margin: 6px 0; }
+  .doc-body strong { color: var(--ink); font-weight: 600; }
+  .doc-body code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace; font-size: 14px; padding: 2px 6px; background: var(--surface-2); border-radius: 5px; color: var(--ink-2); }
+  .doc-body em { font-style: italic; color: var(--ink-2); }
+
+  footer { border-top: 1px solid var(--rule-soft); padding: 24px 0; color: var(--soft); font-size: 12px; }
+  footer .row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--ink); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <a class="wordmark" href="https://kgs-apps.github.io/">Koggi Studio</a>
+    <nav class="topnav">
+      <a href="https://kgs-apps.github.io/#apps">Apps</a>
+      <a href="mailto:koggi1010@gmail.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="doc-hero">
+  <div class="wrap">
+    <p class="crumb"><a href="https://kgs-apps.github.io/">Koggi Studio</a> · <a href="index.html">Peka Counter</a></p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective 2026-05-08</p>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="wrap">
+    <article class="doc-body">
+
+      <p>This privacy policy applies to the Peka Counter app (hereby referred to as &quot;Application&quot;) for mobile devices that was created by Jang Woo Seok (hereby referred to as &quot;Service Provider&quot;) as a Freemium service. This service is intended for use &quot;AS IS&quot;.</p>
+
+      <h2>Information Collection and Use</h2>
+      <p>The Application collects information when you download and use it. This information may include information such as:</p>
+      <ul>
+        <li>Your device's Internet Protocol address (e.g. IP address)</li>
+        <li>Product interaction events, such as screens viewed (Home, Counter, Graph, Record, Settings, Shop), taps, and session duration, together with the time and date of those events</li>
+        <li>The time spent on the Application</li>
+        <li>The operating system you use on your mobile device</li>
+        <li>Slot machine session records (game/big bonus/regular bonus/grape/cherry counts, totals, dates) that you create within the Application</li>
+        <li>Membership status (free vs. premium subscription)</li>
+      </ul>
+      <p>The Application does not gather precise information about the location of your mobile device.</p>
+
+      <h2>Personally Identifiable Information</h2>
+      <p>For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, including but not limited to Email, User ID (assigned at sign-in), Device ID, and Purchase History. The information that the Service Provider request will be retained by them and used as described in this privacy policy.</p>
+      <p>The Application uses <strong>Sign in with Apple</strong> for account authentication. When you use Sign in with Apple, Apple may share your name and email address (or an anonymized relay address) with the Service Provider. The Service Provider stores this information together with a Supabase-issued user ID to identify your account and synchronize your slot session records across devices.</p>
+
+      <h2>Third Party Access</h2>
+      <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
+      <p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
+      <ul>
+        <li><a href="https://www.google.com/policies/privacy/">Google Play Services</a></li>
+        <li><a href="https://support.google.com/admob/answer/6128543?hl=en">AdMob</a></li>
+        <li><a href="https://supabase.com/privacy">Supabase</a></li>
+        <li><a href="https://www.apple.com/legal/privacy/">Apple App Store / StoreKit / Sign in with Apple</a></li>
+      </ul>
+      <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
+      <ul>
+        <li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
+        <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
+        <li>with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+      </ul>
+
+      <h2>Opt-Out Rights</h2>
+      <p>You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.</p>
+      <p>On iOS devices, you can additionally opt out of cross-app tracking at any time via <em>Settings → Privacy &amp; Security → Tracking</em>. Denying the App Tracking Transparency (ATT) prompt — or revoking it later — will prevent the Application from associating analytics events with your device advertising identifier (IDFA).</p>
+
+      <h2>Data Retention &amp; Account Deletion</h2>
+      <p>The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter.</p>
+      <p>The Application provides an <strong>in-app account deletion feature</strong> in <em>Settings</em>. Selecting this option will permanently delete your account, slot session records, and associated personal information from the Service Provider's servers. You may also request deletion by contacting <a href="mailto:koggi1010@gmail.com">koggi1010@gmail.com</a> and the Service Provider will respond in a reasonable time.</p>
+
+      <h2>Children</h2>
+      <p>The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</p>
+      <p>The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discover that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (<a href="mailto:koggi1010@gmail.com">koggi1010@gmail.com</a>) so that they will be able to take the necessary actions.</p>
+
+      <h2>Security</h2>
+      <p>The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.</p>
+
+      <h2>Changes</h2>
+      <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
+      <p>This privacy policy is effective as of 2026-05-08.</p>
+
+      <h2>Your Consent</h2>
+      <p>By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at <a href="mailto:koggi1010@gmail.com">koggi1010@gmail.com</a>.</p>
+
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <span>© 2026 Koggi Studio</span>
+    <a href="mailto:koggi1010@gmail.com">koggi1010@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>

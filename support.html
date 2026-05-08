@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support · Peka Counter — Koggi Studio</title>
+<link rel="apple-touch-icon" href="https://kgs-apps.github.io/assets/icons/peka-counter.png">
+<link rel="icon" href="https://kgs-apps.github.io/assets/icons/peka-counter.png">
+<style>
+  :root {
+    --bg: #FFFFFF; --surface: #FAFAFA; --surface-2: #F5F5F7;
+    --ink: #1D1D1F; --ink-2: #424245; --muted: #6E6E73; --soft: #86868B;
+    --rule: #D2D2D7; --rule-soft: #E8E8ED;
+    --accent: #0071E3; --accent-press: #0058B0;
+    --peka-tint: #E8EDF5; --peka-mark: #3D4663;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Pretendard", "Noto Sans JP", "Noto Sans KR", "Helvetica Neue", Arial, sans-serif;
+    --gutter: clamp(20px, 4vw, 40px);
+    --radius-card: 18px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000; --surface: #1C1C1E; --surface-2: #2C2C2E;
+      --ink: #F5F5F7; --ink-2: #D1D1D6; --muted: #98989D; --soft: #6E6E73;
+      --rule: #38383A; --rule-soft: #2C2C2E;
+      --accent: #2997FF; --accent-press: #5AB1FF;
+      --peka-tint: #1F2433; --peka-mark: #A4B0CC;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; letter-spacing: -0.003em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 var(--gutter); }
+
+  .topbar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 80%, transparent); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--rule-soft); }
+  .topbar .row { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .wordmark { font-size: 17px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .topnav { display: flex; gap: 24px; }
+  .topnav a { color: var(--ink-2); font-size: 14px; font-weight: 400; }
+  .topnav a:hover { color: var(--ink); text-decoration: none; }
+
+  .doc-hero { padding: clamp(48px, 8vw, 80px) 0 clamp(20px, 3vw, 32px); }
+  .doc-hero .crumb { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+  .doc-hero .crumb a { color: var(--muted); text-decoration: none; }
+  .doc-hero .crumb a:hover { color: var(--ink); text-decoration: underline; }
+  .doc-hero h1 { font-size: clamp(34px, 5vw, 48px); font-weight: 700; line-height: 1.1; letter-spacing: -0.022em; margin: 0 0 14px; color: var(--ink); }
+  .doc-hero .lede { font-size: clamp(17px, 1.6vw, 19px); color: var(--muted); margin: 0; max-width: 560px; }
+
+  .doc { padding: clamp(24px, 4vw, 40px) 0 clamp(64px, 9vw, 96px); }
+  .doc-body { max-width: 720px; }
+  .doc-body p { font-size: 16px; line-height: 1.7; color: var(--ink-2); margin: 0 0 16px; }
+  .doc-body h2 { font-size: 22px; font-weight: 600; line-height: 1.25; letter-spacing: -0.012em; margin: 40px 0 12px; color: var(--ink); }
+  .doc-body h2:first-child { margin-top: 0; }
+
+  .contact-card { background: var(--surface); border: 1px solid var(--rule-soft); border-radius: var(--radius-card); padding: 24px; margin: 24px 0; display: flex; align-items: center; gap: 16px; }
+  .contact-card .label { font-size: 13px; color: var(--muted); margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 500; }
+  .contact-card .value { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0; }
+  .contact-card .value a { color: var(--accent); }
+  .contact-card .icon { width: 44px; height: 44px; border-radius: 12px; background: var(--peka-tint); color: var(--peka-mark); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+
+  footer { border-top: 1px solid var(--rule-soft); padding: 24px 0; color: var(--soft); font-size: 12px; }
+  footer .row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--ink); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <a class="wordmark" href="https://kgs-apps.github.io/">Koggi Studio</a>
+    <nav class="topnav">
+      <a href="https://kgs-apps.github.io/#apps">Apps</a>
+      <a href="mailto:koggi1010@gmail.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="doc-hero">
+  <div class="wrap">
+    <p class="crumb"><a href="https://kgs-apps.github.io/">Koggi Studio</a> · <a href="index.html">Peka Counter</a></p>
+    <h1>Support</h1>
+    <p class="lede">Peka Counter に関するお問い合わせは、下記メールアドレスまでご連絡ください。</p>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="wrap">
+    <article class="doc-body">
+
+      <div class="contact-card">
+        <div class="icon">✉</div>
+        <div>
+          <p class="label">Email</p>
+          <p class="value"><a href="mailto:koggi1010@gmail.com">koggi1010@gmail.com</a></p>
+        </div>
+      </div>
+
+      <h2>よくあるお問い合わせ</h2>
+      <p>アプリのバグ報告、機能のご要望、サブスクリプション・購入関連のお問い合わせなど、お気軽にメールでご連絡ください。日本語・英語・韓国語に対応しています。</p>
+
+      <h2>アカウント削除</h2>
+      <p>アプリ内の <em>Settings → アカウント削除</em> から、いつでもアカウントとデータを完全に削除できます。詳細は <a href="privacy.html">プライバシーポリシー</a> をご参照ください。</p>
+
+      <h2>関連ドキュメント</h2>
+      <p>
+        <a href="privacy.html">Privacy Policy</a> ·
+        <a href="terms.html">Terms of Service</a>
+      </p>
+
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <span>© 2026 Koggi Studio</span>
+    <a href="mailto:koggi1010@gmail.com">koggi1010@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>

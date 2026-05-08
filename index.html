@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Peka Counter · Legal — Koggi Studio</title>
+<meta name="description" content="Peka Counter iOS app — Privacy Policy, Terms of Service, and Support.">
+<link rel="apple-touch-icon" href="https://kgs-apps.github.io/assets/icons/peka-counter.png">
+<link rel="icon" href="https://kgs-apps.github.io/assets/icons/peka-counter.png">
+<style>
+  :root {
+    --bg: #FFFFFF; --surface: #FAFAFA; --surface-2: #F5F5F7;
+    --ink: #1D1D1F; --ink-2: #424245; --muted: #6E6E73; --soft: #86868B;
+    --rule: #D2D2D7; --rule-soft: #E8E8ED;
+    --accent: #0071E3; --accent-press: #0058B0;
+    --peka-tint: #E8EDF5; --peka-mark: #3D4663;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Pretendard", "Noto Sans KR", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+    --gutter: clamp(20px, 4vw, 40px);
+    --radius-icon: 22.5%; --radius-card: 18px; --radius-btn: 980px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000; --surface: #1C1C1E; --surface-2: #2C2C2E;
+      --ink: #F5F5F7; --ink-2: #D1D1D6; --muted: #98989D; --soft: #6E6E73;
+      --rule: #38383A; --rule-soft: #2C2C2E;
+      --accent: #2997FF; --accent-press: #5AB1FF;
+      --peka-tint: #1F2433; --peka-mark: #A4B0CC;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.47; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; letter-spacing: -0.003em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 var(--gutter); }
+
+  .topbar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 80%, transparent); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--rule-soft); }
+  .topbar .row { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .wordmark { font-size: 17px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .topnav { display: flex; gap: 24px; }
+  .topnav a { color: var(--ink-2); font-size: 14px; font-weight: 400; }
+  .topnav a:hover { color: var(--ink); text-decoration: none; }
+
+  .legal-hero { padding: clamp(48px, 8vw, 80px) 0 clamp(24px, 4vw, 40px); }
+  .legal-hero .crumb { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+  .legal-hero .crumb a { color: var(--muted); text-decoration: none; }
+  .legal-hero .crumb a:hover { color: var(--ink); text-decoration: underline; }
+  .legal-hero h1 { font-size: clamp(34px, 5vw, 48px); font-weight: 700; line-height: 1.1; letter-spacing: -0.022em; margin: 0 0 12px; color: var(--ink); }
+  .legal-hero .lede { font-size: clamp(17px, 1.6vw, 19px); color: var(--muted); margin: 0; max-width: 560px; }
+
+  .legal-app { padding: clamp(16px, 3vw, 32px) 0 clamp(56px, 8vw, 96px); }
+  .app { background: var(--surface); border-radius: var(--radius-card); padding: clamp(20px, 3vw, 28px); display: grid; grid-template-columns: 64px 1fr; gap: 18px; align-items: center; border: 1px solid var(--rule-soft); margin-bottom: 16px; }
+  .app-icon { width: 64px; height: 64px; border-radius: var(--radius-icon); overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06); background: var(--surface-2); }
+  .app-icon img { width: 100%; height: 100%; object-fit: cover; }
+  .app-meta .name { font-size: 19px; font-weight: 600; margin: 0 0 2px; color: var(--ink); }
+  .app-meta .alt { font-size: 14px; color: var(--muted); margin: 0; }
+
+  .doc-list { display: grid; gap: 12px; }
+  .doc-link { display: flex; justify-content: space-between; align-items: center; padding: 18px 22px; background: var(--surface); border: 1px solid var(--rule-soft); border-radius: var(--radius-card); color: var(--ink); transition: background .2s ease, border-color .2s ease, transform .2s ease; }
+  .doc-link:hover { background: var(--surface-2); border-color: var(--rule); text-decoration: none; transform: translateY(-1px); }
+  .doc-link .doc-title { font-size: 17px; font-weight: 600; margin: 0 0 2px; }
+  .doc-link .doc-sub { font-size: 13px; color: var(--muted); margin: 0; }
+  .doc-link .arrow { color: var(--muted); font-size: 18px; }
+
+  footer { border-top: 1px solid var(--rule-soft); padding: 24px 0; color: var(--soft); font-size: 12px; }
+  footer .row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--ink); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <a class="wordmark" href="https://kgs-apps.github.io/">Koggi Studio</a>
+    <nav class="topnav">
+      <a href="https://kgs-apps.github.io/#apps">Apps</a>
+      <a href="mailto:koggi1010@gmail.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="legal-hero">
+  <div class="wrap">
+    <p class="crumb"><a href="https://kgs-apps.github.io/">Koggi Studio</a> · Peka Counter</p>
+    <h1>Legal &amp; Support</h1>
+    <p class="lede">Peka Counter iOS アプリのプライバシーポリシー、利用規約、サポート情報。</p>
+  </div>
+</section>
+
+<section class="legal-app">
+  <div class="wrap">
+    <div class="app">
+      <div class="app-icon"><img src="https://kgs-apps.github.io/assets/icons/peka-counter.png" alt="Peka Counter icon" width="128" height="128"></div>
+      <div class="app-meta">
+        <p class="name">Peka Counter</p>
+        <p class="alt">パチスロ専用カウンター・統計アプリ</p>
+      </div>
+    </div>
+
+    <div class="doc-list">
+      <a class="doc-link" href="privacy.html">
+        <div>
+          <p class="doc-title">Privacy Policy</p>
+          <p class="doc-sub">プライバシーポリシー · Effective 2026-05-08</p>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="doc-link" href="terms.html">
+        <div>
+          <p class="doc-title">Terms of Service</p>
+          <p class="doc-sub">利用規約 · Effective 2026-01-30</p>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="doc-link" href="support.html">
+        <div>
+          <p class="doc-title">Support</p>
+          <p class="doc-sub">お問い合わせ・サポート</p>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <span>© 2026 Koggi Studio</span>
+    <a href="mailto:koggi1010@gmail.com">koggi1010@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
